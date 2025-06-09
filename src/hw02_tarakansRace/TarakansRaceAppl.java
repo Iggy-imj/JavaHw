@@ -1,4 +1,4 @@
-package tarakansRace;
+package hw02_tarakansRace;
 
 import java.util.Scanner;
 

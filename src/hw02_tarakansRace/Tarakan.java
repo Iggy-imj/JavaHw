@@ -1,4 +1,4 @@
-package tarakansRace;
+package hw02_tarakansRace;
 
 public class Tarakan extends Thread {
     private int id;
