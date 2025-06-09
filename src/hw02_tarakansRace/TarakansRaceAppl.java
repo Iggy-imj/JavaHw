@@ -30,5 +30,9 @@ public class TarakansRaceAppl {
 
         System.out.println("\nRace finished.");
 
+        if (Tarakan.winnerId != 0) {
+            System.out.println("\nCongratulations to tarakan #" + Tarakan.winnerId + " (winner)");
+        }
+
     }
 }

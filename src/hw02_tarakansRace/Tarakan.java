@@ -4,6 +4,7 @@ public class Tarakan extends Thread {
     private int id;
     private int distance;
     private static boolean winnerFound = false;
+    public static int winnerId = 0;
 
     public Tarakan(int id, int distance) {
         this.id = id;
@@ -25,7 +26,7 @@ public class Tarakan extends Thread {
         }
         if (!winnerFound) {
             winnerFound = true;
-            System.out.println("\nCongratulations to tarakan #" + id + " (winner)");
+            winnerId = id;
         }
     }
 
