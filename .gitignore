@@ -1,0 +1,74 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+# Общие настройки
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# IDE: IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# IDE: Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# IDE: NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Logs
+*.log
+
+# OS files
+*.swp
+*~
