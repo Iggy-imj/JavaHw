@@ -1,5 +1,7 @@
 package ait.bank.model;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Account {
     private int accNumber;
     private int balance;
@@ -23,6 +25,7 @@ public class Account {
     public void credit(int sum) {
         balance = balance - sum;
     }
+
 
     @Override
     public final boolean equals(Object o) {
