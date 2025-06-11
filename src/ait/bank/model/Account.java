@@ -5,6 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Account {
     private int accNumber;
     private int balance;
+    private final ReentrantLock lock = new ReentrantLock();
 
     public Account(int accNumber) {
         this.accNumber = accNumber;
@@ -26,6 +27,9 @@ public class Account {
         balance = balance - sum;
     }
 
+    public ReentrantLock getLock() {
+        return lock;
+    }
 
     @Override
     public final boolean equals(Object o) {

@@ -2,6 +2,8 @@ package ait.bank.service;
 
 import ait.bank.model.Account;
 
+import java.util.concurrent.locks.Lock;
+
 public class Transfer implements Runnable {
 
     private Account accFrom;
@@ -16,30 +18,25 @@ public class Transfer implements Runnable {
 
     @Override
     public void run() {
-        Account firstLock;
-        Account secondLock;
+        Account first = accFrom.getAccNumber() < accTo.getAccNumber() ? accFrom : accTo;
+        Account second = accFrom.getAccNumber() < accTo.getAccNumber() ? accTo : accFrom;
 
-        if (accFrom.getAccNumber() < accTo.getAccNumber()) {
-            firstLock = accFrom;
-            secondLock = accTo;
-        } else {
-            firstLock = accTo;
-            secondLock = accFrom;
-        }
+        Lock firstLock = first.getLock();
+        Lock secondLock = second.getLock();
 
-
-        synchronized (firstLock) {
+        firstLock.lock();
+        try {
+            secondLock.lock();
             try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            synchronized (secondLock) {
                 if (accFrom.getBalance() >= sum) {
                     accFrom.credit(sum);
                     accTo.debit(sum);
                 }
+            } finally {
+                secondLock.unlock();
             }
+        } finally {
+            firstLock.unlock();
         }
     }
 }
