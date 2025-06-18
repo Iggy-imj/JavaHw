@@ -17,7 +17,7 @@ public class ImaggaTagAppl {
         int threshold = 30;
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", "Basic YWNjX2ExYzcwYTljNWMyMWQ2Nzo3NWYyZTUyZTkwMDA2YWU2NGU3Yjg2ODU5Mzk0YTM0Nw==");
+        headers.add("Authorization", "Basic ****************************************");
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl("https://api.imagga.com/v2/tags")
                 .queryParam("image_url", imgUrl)
                 .queryParam("language", lang)
