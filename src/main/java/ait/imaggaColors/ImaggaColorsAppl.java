@@ -19,7 +19,7 @@ public class ImaggaColorsAppl {
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", "Basic YWNjX2ExYzcwYTljNWMyMWQ2Nzo3NWYyZTUyZTkwMDA2YWU2NGU3Yjg2ODU5Mzk0YTM0Nw==");
+        headers.add("Authorization", "Basic ****************************************");
 
         UriComponentsBuilder builder = UriComponentsBuilder
                 .fromHttpUrl("https://api.imagga.com/v2/colors")
